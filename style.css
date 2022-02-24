@@ -1,0 +1,52 @@
+.error {
+    display: none;
+}
+
+.wrap {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100%;
+    display: none;
+    z-index: 999;
+}
+.p_wrap {
+    background: #fff;
+    width: 70%;
+    padding: 30px;
+    border-radius: 6px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: relative;
+    animation: 2.1s all ease;
+    animation-name: drop;
+} 
+
+@keyframes drop{
+
+    0%{
+        top: -100px;
+    }
+    50% {
+        top: 55%;
+    }
+    100%{
+        top: 50%;
+    }
+}
+
+.x {
+    position: absolute; 
+    right: 20px;
+    top: 5px;
+    font-size: 20px;
+    cursor: pointer;
+    color: rgb(224, 31, 31);
+    font-weight: bolder;
+}
+.x:hover {
+    color: rgba(224, 31, 31, 0.658);
+}
