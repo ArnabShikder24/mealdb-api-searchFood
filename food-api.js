@@ -1,3 +1,12 @@
+// search iteractive with Enter Button
+const searchInput = document.getElementById('search-field');
+const buttonSearch = document.getElementById('button-search');
+searchInput.addEventListener('keypress', (e) => {
+    if(e.key === 'Enter') {
+        buttonSearch.click();
+    }
+});
+
 const searchFood = () => {
     const searchField = document.getElementById('search-field');
     const searchText = searchField.value;
@@ -26,7 +35,9 @@ const displaySearchResult = meals => {
     }
     else {
         errorMessage.style.display = 'none';
-        meals.forEach(meal => {
+        // only 10 item show
+        const sliceFood = meals.slice(0, 10);
+        sliceFood.forEach(meal => {
             const div = document.createElement('div');
             div.classList.add('col');
             div.innerHTML = `
